@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "629ecc7f20ac68bec855df54"
+  },
+  "code": "uxxX8",
+  "title": "Dibujo",
+  "description": "Este es un producto de prueba",
+  "price": 2500,
+  "stock": 100,
+  "thumbnail": "https://josefacchin.com/wp-content/uploads/2017/12/como-reducir-tamao-imagenes.png",
+  "timestamp": {
+    "$date": {
+      "$numberLong": "1654574207721"
+    }
+  },
+  "__v": 0
+}]

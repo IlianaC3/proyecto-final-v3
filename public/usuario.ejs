@@ -1,0 +1,33 @@
+<%- include('layouts/header') -%>
+<div id="accionEditar" class="row">
+    <h3 class="col-sm-12">Tus datos</h3>
+    <div class="row">
+        <div class="col-sm-6"><a href="/">Regresar</a></div>
+    </div>
+    <form>
+        <div class="row">
+            <div class="col">
+                <h6>Email</h6>
+                <input type="text" class="form-control" id="id" name="id" value="<%= data[0].email %>" disabled>
+                <h6>Nombre</h6>
+                <input type="text" class="form-control" id="code" name="code" value="<%= data[0].nombre %>" disabled>
+            </div>
+            <div class="col">
+                <h6>Edad</h6>
+                <input type="text" class="form-control" name="price" id="priceE" value="<%= data[0].edad %>" disabled>
+                <h6>Dirección</h6>
+                <input type="text" class="form-control" name="title" id="titleE" value="<%= data[0].direccion %>" disabled>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h6>Teléfono</h6>
+                <input type="text" class="form-control" name="description" id="descriptionE" value="<%= data[0].telefono %>" disabled>
+            </div>
+            <div class="col">
+                <h6>Foto</h6>
+                <input type="text" class="form-control" name="stock" id="stockE" value="<%= data[0].foto %>" disabled>
+            </div>
+        </div>
+</div>
+<%- include('layouts/footer') -%>

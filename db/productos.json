@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "code": "Grwzr",
+    "timestamp": "2022-05-12T23:04:19.571Z",
+    "title": "Celular Samsung",
+    "description": "Celular Samsung Android",
+    "price": "200000",
+    "thumbnail": "https://cdn.pixabay.com/photo/2016/11/10/16/03/android-1814556_1280.jpg",
+    "stock": "100"
+  },
+  {
+    "id": 2,
+    "code": "TJ7Rz",
+    "timestamp": "2022-05-12T23:05:59.286Z",
+    "title": "Notebook Acer",
+    "description": "Notebook Acer blanca",
+    "price": "500000",
+    "thumbnail": "https://cdn.pixabay.com/photo/2015/05/31/11/58/desk-791379_1280.jpg",
+    "stock": "100"
+  }
+]

@@ -1,0 +1,42 @@
+<%- include('layouts/header') -%>
+<div id="accionEditar" class="row">
+    <h3 class="col-sm-12">Editar producto</h3>
+    <div class="row">
+        <div class="col-sm-6"><a href="/administrador?admin=true">Regresar</a></div>
+    </div>
+    <form>
+        <div class="row">
+            <div class="col">
+                <input type="hidden" id="id" name="id" value="<%= data.id %>">
+                <input type="hidden" id="code" name="code" value="<%= data.code %>">
+                <input type="text" class="form-control" name="title" id="titleE" value="<%= data.title %>"
+                    placeholder="Ingrese nombre del producto">
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" name="price" id="priceE" value="<%= data.price %>"
+                    placeholder="Ingrese precio del producto">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" name="description" id="descriptionE" value="<%= data.description %>"
+                    placeholder="Ingrese la descripcion del producto">
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" name="stock" id="stockE" value="<%= data.stock %>"
+                    placeholder="Ingrese el stock del producto">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <input type="url" class="form-control" name="thumbnail" id="thumbnailE" value="<%= data.thumbnail %>"
+                    placeholder="Ingrese imagen del producto">
+            </div>
+            <div class="col">
+                <input type="button" class="col-sm-4 btn btn-primary" value="Enviar" onclick="EnviarDatosEditar()">
+            </div>
+        </div>
+</div>
+<%- include('layouts/footer') -%>

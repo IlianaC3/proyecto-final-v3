@@ -1,0 +1,37 @@
+<%- include('layouts/header') -%>
+<h1>Paris S.A.</h1>
+<h3>Carrito de compras</h3>
+<h6>Carrito ID: <%= data[0].id %> - Fecha: <%= data[0].timestamp %></h6>
+<a class="btn btn-outline-primary" onclick="comprarCarrito('<%= data[0].id %>')">Comprar</a> 
+<table class="table table-bordered table-striped" id="result">
+    <thead>
+        <th>Id</th>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Imagen</th>
+        <th>Sotck</th>
+        <th>Fecha</th>
+        <th>Carrito</th>
+    </thead>
+    <tbody>
+        <% data[0].productos.forEach(function(unique) { %>
+        <tr>
+            <td><%= unique.id %></td>
+            <td><%= unique.code %></td>
+            <td><%= unique.title %></td>
+            <td><%= unique.description %></td>
+            <td><%= unique.price %></td>
+            <td><img src="<%= unique.thumbnail %>" style="width: 25%" />
+            <td><%= unique.stock %></td>
+            <td><%= unique.timestamp %></td>
+            <td>
+                <a class="btn btn-outline-warning" onclick="eliminarProducto('<%= unique.id %>', '<%= data[0].id %>')">Sacar</a> 
+            </td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>
+<h5><a href="/">Regresar</a></h5>
+<%- include('layouts/footer') -%>

@@ -1,0 +1,39 @@
+<%- include('layouts/header') -%>
+<h1>Paris S.A. Admin</h1>
+<h3>Lista de productos</h3>
+<h5><a href="/agregar?admin=true">Agregar producto</a></h5>
+<table class="table table-bordered table-striped" id="result">
+    <thead>
+        <th>Id</th>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Imagen</th>
+        <th>Sotck</th>
+        <th>Fecha</th>
+        <th>Administrar</th>
+    </thead>
+    <tbody>
+        <% data.forEach(function(unique) { %>
+        <tr>
+            <td><%= unique.id %></td>
+            <td><%= unique.code %></td>
+            <td><%= unique.title %></td>
+            <td><%= unique.description %></td>
+            <td><%= unique.price %></td>
+            <td><img src="<%= unique.thumbnail %>" style="width: 25%" />
+            <td><%= unique.stock %></td>
+            <td><%= unique.timestamp %></td>
+            <td>
+                <a class="btn btn-outline-primary"
+                    href="/editar/<%= unique.id %>/?admin=true">Editar</a>
+                -
+                <a class="btn btn-outline-danger"
+                    onclick="eliminarProducto('<%= unique.id %>')">Eliminar</a>
+            </td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>
+<%- include('layouts/footer') -%>
